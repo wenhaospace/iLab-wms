@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1050px;
+}
+
+#banner {
+  position: relative;
+  width: 100vw;
+  height: 600px;
+  background: black;
+  overflow: hidden;
+}
+
+#banner .carousel {
+  background: #c7c7c7;
+  height: 100%;
+  display: flex;
+  width: 500%;
+}
+
+#banner .carousel .carousel-item {
+  height: 100%;
+  width: 20%;
+  transition: 1s;
+}
+
+#banner .carousel .carousel-item .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#banner .carousel .carousel-item .container p {
+  width: 50%;
+}
+
+/* 指示器 */
+#banner .carousel-pointer {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+}
+
+#banner .carousel-pointer div {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  background: white;
+  transition: 0.5s;
+  opacity: 0.48;
+}
+
+#banner .carousel-pointer .carousel-pointer-item-active {
+  width: 30px;
+  opacity: 1;
+}

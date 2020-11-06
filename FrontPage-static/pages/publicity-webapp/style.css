@@ -1,0 +1,157 @@
+/* 重置样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #000525;
+  height: 200vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* 工具类 */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.inner {
+  width: 1150px;
+  margin: 0 auto;
+}
+/* @media screen and (max-width: 1150px) {
+  .inner {
+    width: 100%;
+  }
+} */
+
+.cross-align-center {
+  align-items: center;
+}
+
+.main-align-space-between {
+  justify-content: space-between;
+}
+
+/* HOME PAGE */
+/* Navgation */
+#nav {
+  height: 60px;
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  line-height: 1;
+}
+/* logo */
+#nav .logo {
+  height: 60px;
+}
+
+#nav .logo img {
+  height: 100%;
+  padding: 6px;
+}
+/* menu */
+#nav .nav-menu .menu-item {
+  display: inline-block;
+  font-size: 1rem;
+  height: 60px;
+  padding: 22px 1.5rem;
+}
+
+#nav .nav-menu .menu-item:hover {
+  background-color: hsla(0, 0%, 100%, 0.25);
+  border-bottom: 2px solid white;
+}
+
+/* BANNER */
+#banner {
+  position: relative;
+  width: 100vw;
+  height: 600px;
+  background: black;
+  overflow: hidden;
+}
+
+#banner .carousel {
+  background: #16296a;
+  height: 100%;
+  display: flex;
+  width: 500%;
+}
+
+#banner .carousel .carousel-item {
+  height: 100%;
+  width: 20%;
+  transition: 1s;
+}
+
+#banner .carousel .carousel-item .inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#banner .carousel .carousel-item .inner p {
+  width: 50%;
+}
+
+/* 指示器 */
+#banner .carousel-pointer {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+}
+
+#banner .carousel-pointer div {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  background: white;
+  transition: 0.5s;
+  opacity: 0.48;
+}
+
+#banner .carousel-pointer .carousel-pointer-item-active {
+  width: 30px;
+  opacity: 1;
+}
+
+.banner-text {
+  color: white;
+}
+
+.banner-text .title {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 500;
+}
+.banner-text .slogan {
+  font-size: 20px;
+  margin-top: 35px;
+}
+
+.banner-text .description {
+  line-height: 1.8;
+  margin-top: 20px;
+  width: 460px;
+  font-size: 15px;
+}

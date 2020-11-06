@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <style type="text/css">
+      div {
+        margin: auto;
+        border: 1px solid white;
+        width: 660px;
+        height: 430px;
+      }
+      ul li {
+        float: left;
+        border: 1px solid #00f;
+        width: 20px;
+        height: 20px;
+        list-style: none;
+        text-align: center;
+        line-height: 20px;
+      }
+      ul {
+        margin: 10px 230px;
+      }
+    </style>
+    <script type="text/javascript">
+      var i = 1;
+      var dsq;
+      window.onload = Init;
+      function Init() {
+        dsq = window.setInterval("tuDong()", 1000);
+        var tongbu = document.getElementById("t" + i);
+        tongbu.style.background = "orange";
+      }
+      function tuDong() {
+        i++;
+        if (i > 5) {
+          i = 1;
+        }
+        var obj = document.getElementById("d1");
+        obj.src = "images/tupian (" + i + ").jpg";
+        for (var j = 1; j <= 5; j++) {
+          var allobj = document.getElementById("t" + j);
+          allobj.style.background = "white";
+        }
+        var tongbu = document.getElementById("t" + i);
+        tongbu.style.background = "orange";
+      }
+      function tingTu() {
+        //alert(123);
+        window.clearInterval(dsq);
+      }
+      function dongTu() {
+        dsq = window.setInterval("tuDong()", 1000);
+      }
+      function yanse(n, m) {
+        //放上按钮变色
+        i = n;
+        var obj = document.getElementById("d1");
+        obj.src = "images/tupian (" + n + ").jpg";
+        for (var j = 1; j <= 5; j++) {
+          var allobj = document.getElementById("t" + j);
+          allobj.style.background = "white";
+        }
+        tingTu();
+        m.style.background = "orange";
+      }
+      function yanse2() {
+        //移开按钮变色
+        dsq = window.setInterval("tuDong()", 1000);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <img
+        id="d1"
+        src="images/tupian (1).jpg"
+        onmouseover="tingTu()"
+        onmouseout="dongTu()"
+      />
+      <ul>
+        <li id="t1" onmouseover="yanse(1,this)" onmouseout="yanse2()">1</li>
+        <li id="t2" onmouseover="yanse(2,this)" onmouseout="yanse2()">2</li>
+        <li id="t3" onmouseover="yanse(3,this)" onmouseout="yanse2()">3</li>
+        <li id="t4" onmouseover="yanse(4,this)" onmouseout="yanse2()">4</li>
+        <li id="t5" onmouseover="yanse(5,this)" onmouseout="yanse2()">5</li>
+      </ul>
+    </div>
+  </body>
+</html>
