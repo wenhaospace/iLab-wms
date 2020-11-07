@@ -75,3 +75,76 @@ function pointerRemoveActive(e) {
     initCarousel();
   }
 }
+
+// Section-1
+
+document.querySelectorAll(".icon-item").forEach(function(item) {
+  item.addEventListener("click", showChange);
+});
+
+function showChange(e) {
+  // inactive 全部 icon
+  inaciveIcon();
+
+  // console.log(e.target);
+
+  // active 当前 icon
+  let num = activeIcon(e.target);
+
+  // 移动 triangle
+  moveTriangle(num);
+
+  // 改变文本
+  changeText(num);
+}
+
+function inaciveIcon() {
+  document.querySelectorAll("i").forEach(function(item) {
+    item.classList = "icon-inactive";
+  });
+}
+
+function activeIcon(item) {
+  let num;
+  if (item.classList.contains("icon-item")) {
+    num = Number(item.id.slice(-1));
+    document.getElementById(item.id).children[0].classList = "icon-active";
+  } else if (item.parentElement.classList.contains("icon-item")) {
+    num = Number(item.parentElement.id.slice(-1));
+    document.getElementById(item.parentElement.id).children[0].classList =
+      "icon-active";
+  } else {
+    num = Number(item.parentElement.parentElement.id.slice(-1));
+    document.getElementById(
+      item.parentElement.parentElement.id
+    ).children[0].classList = "icon-active";
+  }
+  return num;
+}
+
+function moveTriangle(num) {
+  switch (num) {
+    case 1:
+      document.querySelector(".triangle").style.left = "65px";
+      break;
+    case 2:
+      document.querySelector(".triangle").style.left = "392px";
+      break;
+    case 3:
+      document.querySelector(".triangle").style.left = "720px";
+      break;
+    case 4:
+      document.querySelector(".triangle").style.left = "1047px";
+      break;
+  }
+}
+
+function changeText(num) {
+  for (let i = 1; i < 5; i++) {
+    if (i == num) {
+      document.querySelector(`.wave-text-${i}`).style.display = "block";
+    } else {
+      document.querySelector(`.wave-text-${i}`).style.display = "none";
+    }
+  }
+}

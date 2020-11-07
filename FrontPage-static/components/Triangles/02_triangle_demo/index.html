@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Triangle Demo</title>
+    <style>
+      body {
+        background: gray;
+      }
+      .tri1 {
+        display: inline-block;
+        position: relative;
+        width: 0px;
+        height: 0px;
+        /* background: white; */
+        border-top: 18px solid white;
+        border-right: 18px solid transparent;
+        border-bottom: 18px solid transparent;
+        border-left: 18px solid transparent;
+      }
+
+      .tri1:before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: -18px;
+        width: 0px;
+        height: 0px;
+        /* background: white; */
+        border-top: 7px solid blue;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 7px solid transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tri1"></div>
+  </body>
+</html>

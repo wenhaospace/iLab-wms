@@ -7,8 +7,8 @@
 }
 
 body {
-  background: #000525;
-  height: 200vh;
+  /* background: #000525;
+  height: 200vh; */
 }
 
 ul {
@@ -21,10 +21,19 @@ a {
   white-space: nowrap;
 }
 
+section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
 /* 工具类 */
 .flex-row {
   display: flex;
   flex-direction: row;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 .inner {
@@ -43,6 +52,19 @@ a {
 
 .main-align-space-between {
   justify-content: space-between;
+}
+
+.section-title {
+  color: #31489b;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 65px;
+}
+
+.text {
+  line-height: 1;
+  font-size: 18px;
+  margin-top: 40px;
 }
 
 /* HOME PAGE */
@@ -154,4 +176,84 @@ a {
   margin-top: 20px;
   width: 460px;
   font-size: 15px;
+}
+
+/* 领先的自然语言处理 */
+#section-1 {
+  width: 100vw;
+}
+.icon-item {
+  text-align: center;
+  width: 168px;
+  color: #333;
+  cursor: pointer;
+}
+.icon-item > i {
+  width: 60px;
+  height: 60px;
+}
+.icon-inactive {
+  opacity: 0.4;
+}
+.icon-active {
+  opacity: 1;
+}
+
+.triangle-wraper {
+  margin-top: 30px;
+  height: 18px;
+}
+
+.triangle {
+  display: inline-block;
+  position: relative;
+  left: 65px;
+  /* 65px 392px 720px 1047px */
+  top: 17px;
+  width: 0px;
+  height: 0px;
+  /* background: white; */
+  border-top: 18px solid white;
+  border-right: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 18px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.triangle:before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: -18px;
+  width: 0px;
+  height: 0px;
+  /* background: white; */
+  border-top: 7px solid #00032d;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+.wave-wraper {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  line-height: 36px;
+  height: 242px;
+  padding-top: 37px;
+  background: url(//static.milvai.cn/static/powerlawai/img/b5bf120.png)
+    no-repeat center center/cover;
+}
+
+.wave-wraper .title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.wave-wraper .description {
+  margin-top: 2px;
+  line-height: 1.7;
+}
+
+.wave-wraper > div:not(:first-child) {
+  display: none;
 }
