@@ -23,7 +23,7 @@ a {
 
 section {
   padding-top: 90px;
-  /* padding-bottom: 90px; */
+  padding-bottom: 90px;
 }
 
 /* 工具类 */
@@ -34,6 +34,10 @@ section {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .inner {
@@ -48,6 +52,10 @@ section {
 
 .cross-align-center {
   align-items: center;
+}
+
+.main-align-center {
+  justify-content: center;
 }
 
 .main-align-space-between {
@@ -182,29 +190,29 @@ section {
 #section-1 {
   width: 100vw;
 }
-.icon-item {
+#section-1 .icon-item {
   text-align: center;
   width: 168px;
   color: #333;
   cursor: pointer;
 }
-.icon-item > i {
+#section-1 .icon-item > i {
   width: 60px;
   height: 60px;
 }
-.icon-inactive {
+#section-1 .icon-inactive {
   opacity: 0.4;
 }
-.icon-active {
+#section-1 .icon-active {
   opacity: 1;
 }
 
-.triangle-wraper {
+#section-1 .triangle-wraper {
   margin-top: 30px;
   height: 18px;
 }
 
-.triangle {
+#section-1 .triangle {
   display: inline-block;
   position: relative;
   left: 65px;
@@ -220,7 +228,7 @@ section {
   transition: all 0.4s ease;
 }
 
-.triangle:before {
+#section-1 .triangle:before {
   content: "";
   position: absolute;
   left: -7px;
@@ -234,7 +242,7 @@ section {
   border-left: 7px solid transparent;
 }
 
-.wave-wraper {
+#section-1 .wave-wraper {
   width: 100%;
   color: #fff;
   font-size: 16px;
@@ -245,16 +253,16 @@ section {
     no-repeat center center/cover;
 }
 
-.wave-wraper .title {
+#section-1 .wave-wraper .title {
   font-size: 18px;
   font-weight: 600;
 }
-.wave-wraper .description {
+#section-1 .wave-wraper .description {
   margin-top: 2px;
   line-height: 1.7;
 }
 
-.wave-wraper > div:not(:first-child) {
+#section-1 .wave-wraper > div:not(:first-child) {
   display: none;
 }
 
@@ -262,10 +270,13 @@ section {
 
 /* Slider */
 /* carousel */
+#section-2 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 #slider {
   background: #f7f8fc;
   width: 100%;
-  /* padding-top: 0; */
 }
 #slider .carousel [type="radio"] {
   display: none;
@@ -473,4 +484,117 @@ section {
 
 #slider .indicator .indicator-item-title {
   color: #31489b;
+}
+
+/* ------------------------------------------------------------------ */
+/* Section-3 */
+#section-3 .item {
+  width: 336px;
+}
+
+#section-3 .item .icon-wraper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 8px 15px 1px rgba(49, 72, 155, 0.16);
+}
+
+#section-3 .item .icon-wraper img {
+  width: 48px;
+  height: 41px;
+}
+
+#section-3 .item .title {
+  font-size: 20px;
+  color: #31489b;
+  line-height: 1;
+  margin-top: 38px;
+}
+
+#section-3 .item .description {
+  width: 310px;
+  color: #6377bf;
+  margin-top: 15px;
+  line-height: 30px;
+}
+
+/* --------------------------------------------------------- */
+/* Section-4 */
+#section-4 {
+  background: #f7f8fc;
+}
+#section-4 .inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+.flid-cards {
+  height: 594px;
+  margin-bottom: 10px;
+}
+
+.flid-card-item {
+  position: relative;
+  width: 285px;
+  height: 275px;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+.flid-card-item:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  color: #31489b;
+  border-radius: 8px;
+}
+
+.thefront img {
+  width: 62.5px;
+  height: 51px;
+}
+
+.thefront .title {
+  margin-top: 40px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.theback {
+  position: absolute;
+  padding-left: 45px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #31489b;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 8px;
+}
+.theback .icon {
+  color: white;
+  font-size: 35px;
+}
+.theback .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 25px 0;
+}
+.theback .description {
+  font-size: 14px;
+  line-height: 24px;
+  width: 200px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }

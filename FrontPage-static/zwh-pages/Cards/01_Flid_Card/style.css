@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.main-align-between {
+  justify-content: space-between;
+}
+
+.flid-cards {
+  height: 594px;
+  margin-bottom: 10px;
+}
+
+.flid-card-item {
+  position: relative;
+  width: 285px;
+  height: 275px;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+.flid-card-item:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  color: #31489b;
+  border-radius: 8px;
+}
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #31489b;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 8px;
+}
