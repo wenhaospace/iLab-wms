@@ -189,7 +189,7 @@ function initSlider() {
 
 // startSlider 开始滚动
 function startSlider() {
-  console.log(currentNum);
+  // console.log(currentNum);
   activeIndicator(currentNum);
   activeSlider(currentNum);
   currentNum++;
