@@ -1,29 +1,13 @@
-/* 重置样式 */
 * {
-  margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
 }
 
 body {
-  /* background: #000525;
-  height: 200vh; */
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-section {
-  padding-top: 90px;
-  /* padding-bottom: 90px; */
+  padding: 20px;
+  background: #eee;
+  user-select: none;
+  /* 禁止选中 */
 }
 
 /* 工具类 */
@@ -40,11 +24,6 @@ section {
   width: 1150px;
   margin: 0 auto;
 }
-/* @media screen and (max-width: 1150px) {
-  .inner {
-    width: 100%;
-  }
-} */
 
 .cross-align-center {
   align-items: center;
@@ -54,218 +33,9 @@ section {
   justify-content: space-between;
 }
 
-.section-title {
-  color: #31489b;
-  font-size: 32px;
-  font-weight: 500;
-  margin-bottom: 65px;
-}
-
-.text {
-  line-height: 1;
-  font-size: 18px;
-  margin-top: 40px;
-}
-
-/* HOME PAGE */
-/* Navgation */
-#nav {
-  height: 60px;
-  width: 100%;
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  line-height: 1;
-}
-/* logo */
-#nav .logo {
-  height: 60px;
-}
-
-#nav .logo img {
-  height: 100%;
-  padding: 6px;
-}
-/* menu */
-#nav .nav-menu .menu-item {
-  display: inline-block;
-  font-size: 1rem;
-  height: 60px;
-  padding: 22px 1.5rem;
-}
-
-#nav .nav-menu .menu-item:hover {
-  background-color: hsla(0, 0%, 100%, 0.25);
-  border-bottom: 2px solid white;
-}
-
-/* BANNER */
-#banner {
-  position: relative;
-  width: 100vw;
-  height: 600px;
-  background: black;
-  overflow: hidden;
-}
-
-#banner .carousel {
-  background: #16296a;
-  height: 100%;
-  display: flex;
-  width: 500%;
-}
-
-#banner .carousel .carousel-item {
-  height: 100%;
-  width: 20%;
-  transition: 1s;
-}
-
-#banner .carousel .carousel-item .inner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#banner .carousel .carousel-item .inner p {
-  width: 50%;
-}
-
-/* 指示器 */
-#banner .carousel-pointer {
-  position: absolute;
-  display: flex;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10%;
-}
-
-#banner .carousel-pointer div {
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  margin: 5px;
-  background: white;
-  transition: 0.5s;
-  opacity: 0.48;
-}
-
-#banner .carousel-pointer .carousel-pointer-item-active {
-  width: 30px;
-  opacity: 1;
-}
-
-.banner-text {
-  color: white;
-}
-
-.banner-text .title {
-  font-size: 32px;
-  line-height: 1;
-  font-weight: 500;
-}
-.banner-text .slogan {
-  font-size: 20px;
-  margin-top: 35px;
-}
-
-.banner-text .description {
-  line-height: 1.8;
-  margin-top: 20px;
-  width: 460px;
-  font-size: 15px;
-}
-
-/* 领先的自然语言处理 */
-#section-1 {
-  width: 100vw;
-}
-.icon-item {
-  text-align: center;
-  width: 168px;
-  color: #333;
-  cursor: pointer;
-}
-.icon-item > i {
-  width: 60px;
-  height: 60px;
-}
-.icon-inactive {
-  opacity: 0.4;
-}
-.icon-active {
-  opacity: 1;
-}
-
-.triangle-wraper {
-  margin-top: 30px;
-  height: 18px;
-}
-
-.triangle {
-  display: inline-block;
-  position: relative;
-  left: 65px;
-  /* 65px 392px 720px 1047px */
-  top: 17px;
-  width: 0px;
-  height: 0px;
-  /* background: white; */
-  border-top: 18px solid white;
-  border-right: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-  border-left: 18px solid transparent;
-  transition: all 0.4s ease;
-}
-
-.triangle:before {
-  content: "";
-  position: absolute;
-  left: -7px;
-  top: -18px;
-  width: 0px;
-  height: 0px;
-  /* background: white; */
-  border-top: 7px solid #00032d;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 7px solid transparent;
-}
-
-.wave-wraper {
-  width: 100%;
-  color: #fff;
-  font-size: 16px;
-  line-height: 36px;
-  height: 242px;
-  padding-top: 37px;
-  background: url(//static.milvai.cn/static/powerlawai/img/b5bf120.png)
-    no-repeat center center/cover;
-}
-
-.wave-wraper .title {
-  font-size: 18px;
-  font-weight: 600;
-}
-.wave-wraper .description {
-  margin-top: 2px;
-  line-height: 1.7;
-}
-
-.wave-wraper > div:not(:first-child) {
-  display: none;
-}
-
-/* ------------------------------------------- */
-
-/* Slider */
 /* carousel */
 #slider {
   background: #f7f8fc;
-  width: 100%;
-  /* padding-top: 0; */
 }
 #slider .carousel [type="radio"] {
   display: none;
@@ -467,8 +237,8 @@ section {
   height: 8px;
   border-radius: 50%;
   background-color: #31489b;
-  left: 2px;
-  top: 2px;
+  left: 3px;
+  top: 3px;
 }
 
 #slider .indicator .indicator-item-title {
